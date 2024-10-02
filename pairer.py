@@ -23,7 +23,7 @@ def get_pair(inp_character=''):
     if inp_character != '' and validate_character(inp_character):
         characters.append(inp_character)
     while len(characters) < 2:
-        character = (input(f'{descriptor[len(characters)]}: ')).capitalize()
+        character = (input(f'{descriptor[len(characters)]}: ')).strip().capitalize()
         if character == '' and len(characters) == 1:
             characters.append(characters[0])
             return characters
@@ -70,6 +70,6 @@ print('Enter one character to view only their liked meals.\n')
 user_in = ''
 while True:
     execute_pairer(user_in)
-    user_in = (input('\nInput another character or hit enter to run again (n to exit): ')).capitalize()
+    user_in = (input('\nInput another character or hit enter to run again (n to exit): ')).strip().capitalize()
     if user_in == 'N':
         break
