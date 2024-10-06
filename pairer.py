@@ -70,6 +70,6 @@ print('Enter one character to view only their liked meals.\n')
 user_in = ''
 while True:
     execute_pairer(user_in)
-    user_in = (input('\nInput another character or hit enter to run again (n to exit): ')).strip().capitalize()
-    if user_in == 'N':
+    user_in = (input('\nInput another character or hit enter to run again (q to quit): ')).strip().capitalize()
+    if user_in == 'Q':
         break
